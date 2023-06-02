@@ -1,10 +1,13 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const cors = require("cors");
-const dotenv = require("dotenv");
-const helmet = require("helmet");
-const morgan = require("morgan");
+import express from "express";
+import bodyParser from "body-parser";
+import mongoose from "mongoose";
+import cors from "cors";
+import dotenv from "dotenv";
+import helmet from "helmet";
+import morgan from "morgan";
+import KPI from "./models/KPI.js";
+import kpiRoutes from "./routes/kpi.js";
+import { kpis } from "./data/data.js";
 
 /* CONFIGURATIONS */
 dotenv.config();
@@ -17,6 +20,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
+/* ROUTES */
+app.use("/kpi", kpiRoutes);
+
 const PORT = process.env.PORT || 9000;
 mongoose
   .connect(process.env.MONGO_URL, {
@@ -27,8 +33,8 @@ mongoose
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
     /* ADD DATA ONE TIME ONLY OR AS NEEDED */
-    // await mongoose.connection.db.dropDatabase();
-    // KPI.insertMany(kpis);
+    await mongoose.connection.db.dropDatabase();
+    KPI.insertMany(kpis);
     // Product.insertMany(products);
     // Transaction.insertMany(transactions);
   })
