@@ -2,10 +2,10 @@
 ![Dashboard-app](./Image/screenshot.png)
 ![Dashboard-app2](./Image/screenshot2.png)
 
-
+ Dashboard Financeiro, empregando tecnologias modernas como React, TypeScript, MongoDB e Redux. Esse projeto envolveu a criação de uma plataforma interativa que permite a visualização e análise de dados financeiros de forma eficiente. Utilizando a biblioteca Material UI, garanti uma interface elegante e responsiva para uma experiência do usuário aprimorada. O Dashboard oferece gráficos interativos, recursos avançados de filtragem e ordenação, além de uma camada de autenticação para garantir a segurança dos dados.
 
 ## Demonstração
-https://vinicinbraga.github.io/E-commerce-App/
+https://dashboard-app-frontend.vercel.app
 
 Veja uma demonstração ao vivo aqui
 
@@ -18,7 +18,7 @@ git clone https://github.com/VinicinBraga/E-commerce-App.git
 
 3.Acesse o diretório do projeto:
 ```bash
-cd E-commerce-App
+cd Dashboard-app
 ```
 4.Instale as dependências do projeto:
 ```bash
@@ -26,29 +26,8 @@ npm install
 ```
 
 ## Como usar
+npm run dev
 
-npm start
-
-## Estrutura do Projeto
-```bash
-Netflix-Clone/
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   │   ├── Cart.jsx
-│   │   ├── Home.js
-│   │   ├── Navbar.js
-│   │   ├── Product.js
-│   │   ├── Product.js
-│   │   └── ...
-│   ├── App.css
-│   ├── App.js
-│   └── ...
-├── package.json
-├── ...
-└── README.md
-```
 ## Contribuição
 Contribuições são bem-vindas! Se você encontrar bugs, problemas ou tiver melhorias a serem sugeridas, abra uma issue ou envie uma solicitação de pull.
 
